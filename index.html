@@ -463,10 +463,19 @@
         }
 
 <style>
-    /* Variables para el tamaño de la hoja */
+        
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        transition: all 1s ease;
+        opacity: 0;
+        z-index: 100;
+    }
+/* Variables para el tamaño de la hoja */
     :root {
-        --hoja-width: 10%; /* Ancho de la hoja (puedes cambiarlo) */
-        --hoja-height: 500%; /* Alto de la hoja (puedes cambiarlo) */
+        --hoja-width: 90%; /* Ancho de la hoja (ajusta este valor) */
+        --hoja-height: 70%; /* Alto de la hoja (ajusta este valor) */
     }
 
     /* Estilo de la hoja que se desenrolla */
@@ -495,18 +504,19 @@
     .hoja .contenido {
         padding: 20px;
         font-family: 'Acme', sans-serif;
-        font-size: 16px;
+        font-size: 14px; /* Tamaño de fuente más pequeño para celular */
         color: #000;
         text-align: left; /* Alinea el texto a la izquierda */
         opacity: 0;
         transition: opacity 0.5s ease 0.5s; /* Retraso para que aparezca después de desenrollarse */
-        height: 50%; /* Asegura que el contenido ocupe toda la altura */
+        height: 100%; /* Asegura que el contenido ocupe toda la altura */
         overflow-y: auto; /* Añade scroll si el contenido es muy largo */
     }
 
     .hoja.abierta .contenido {
         opacity: 1;
     }
+       
 </style>
 
        
